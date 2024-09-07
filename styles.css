@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background for the page */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* White text color for contrast */
+    position: relative; /* To position the overlay correctly */
+}
+
+.telegram-overlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.telegram-overlay img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: make the icon circular */
+    background: #fff; /* Optional: add a background for better visibility */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #333; /* Dark grey background for the form */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center; /* Center content */
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ffcc00; /* Yellow color for the heading */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow color for labels */
+}
+
+input, select, button {
+    width: 100%; /* Full width for inputs and selects */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444; /* Dark border for inputs and selects */
+    border-radius: 4px;
+    background-color: #222; /* Dark background for inputs and selects */
+    color: #fff; /* White text color for inputs and selects */
+    box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+}
+
+button {
+    background-color: #ffcc00; /* Yellow background for the button */
+    color: #000; /* Black text color for the button */
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+button:hover {
+    background-color: #e6b800; /* Slightly darker yellow on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #333; /* Dark grey background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Border color */
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Maximum width */
+    border-radius: 8px; /* Rounded corners */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text */
+}
+
+.close-btn {
+    color: #fff; /* White color for the close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ffcc00; /* Yellow color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px; /* Reduce margin for smaller screens */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size for smaller screens */
+    }
+
+    button {
+        padding: 10px; /* Adjust button padding for smaller screens */
+    }
+
+    .telegram-overlay img {
+        width: 40px; /* Adjust Telegram icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px; /* Further adjust logo size for very small screens */
+    }
+
+    input, select, button {
+        font-size: 14px; /* Adjust font size for very small screens */
+    }
+
+    .telegram-overlay img {
+        width: 35px; /* Further adjust Telegram icon size */
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #333; /* Dark grey background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Border color */
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Maximum width */
+    border-radius: 8px; /* Rounded corners */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text */
+}
+
+.close-btn {
+    color: #fff; /* White color for the close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ffcc00; /* Yellow color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
