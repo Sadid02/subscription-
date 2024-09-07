@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = `
             New Subscription Request:
             Name: ${name}
-            Email: ${email}
+            Email: ${email} 
             Package Option: ${packageOption}
             Payment Option: ${paymentOption}
             Transaction ID: ${transactionId}
@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log('Sending message:', message); // Log the message being sent
 
-        fetch('https://api.telegram.org/bot<Your_Bot_Token>/sendMessage', {
+        fetch('https://api.telegram.org/bot7459570693:AAEAwokKcRLs_BnDZeJ7yGVuvyYiiAVftVk/sendMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                chat_id: '<Your_Chat_ID>',
+                chat_id: '1724753293',
                 text: message
             })
         }).then(response => {
