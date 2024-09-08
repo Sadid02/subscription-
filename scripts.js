@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log('Sending message:', message); // Log the message being sent
 
-        fetch('https://api.telegram.org/bot7459570693:AAEAwokKcRLs_BnDZeJ7yGVuvyYiiAVftVk/sendMessage', {
+        fetch('7459570693:AAHeQkEBCRJk-HOI8QLqDakGkkskl7O27tw', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -69,33 +69,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-const express = require('express');
-const axios = require('axios');
-const bodyParser = require('body-parser');
-
-const app = express();
-app.use(bodyParser.json());
-
-app.post('/send-message', async (req, res) => {
-    const { name, email, packageOption, paymentOption, transactionId } = req.body;
-    const message = `
-        New Subscription Request:
-        Name: ${name}
-        Email: ${email}
-        Package Option: ${packageOption}
-        Payment Option: ${paymentOption}
-        Transaction ID: ${transactionId}
-    `;
-
-    try {
-        const response = await axios.post(`https://api.telegram.org/bot<Your_Bot_Token>/sendMessage`, {
-            chat_id: '<Your_Chat_ID>',
-            text: message
-        });
-        res.json(response.data);
-    } catch (error) {
-        res.status(500).send('Error sending message');
-    }
-});
-
-app.listen(3000, () => console.log('Server running on port 3000'));
